@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 const db = mysql.createConnection({
     host: "localhost",
     user:"root",
-    password:"Sankar@13",
+    password:"Your Password",
     database: "sakila",
 });
 
