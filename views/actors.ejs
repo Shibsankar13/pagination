@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films Pagination</title>
+</head>
+<body>
+    <h1>Actors List</h1>
+    <ul>
+        <% actors.forEach(actor => { %>
+            <li><%= actor.first_name %> <%= actor.last_name %></li>
+        <% }); %>
+    </ul>
+
+    <!-- Pagination Buttons -->
+    <div>
+        <% if (page > 1) { %>
+            <a href="/actors?page=<%= page - 1 %>&limit=<%= limit %>">Previous</a>
+        <% } %>
+
+        <span>Page <%= page %> of <%= totalPages %></span>
+
+        <% if (page < totalPages) { %>
+            <a href="/actors?page=<%= page + 1 %>&limit=<%= limit %>">Next</a>
+        <% } %>
+    </div>
+</body>
+</html>
